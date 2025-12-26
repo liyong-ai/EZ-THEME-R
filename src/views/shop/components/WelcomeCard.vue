@@ -11,14 +11,6 @@
           <IconServer :size="18" />
           <span class="btn-text">查看节点</span>
         </button>
-        <button
-          class="view-toggle-btn"
-          :class="{ active: false }"
-          @click="openIframePopup"
-        >
-          <IconBrandAppleFilled :size="18" />
-          <span class="btn-text">小火箭Apple ID</span>
-        </button>
       </div>
     </div>
     <div class="card-body">
@@ -29,19 +21,13 @@
 
 <script setup>
 import { useRouter } from 'vue-router';
-import { IconServer, IconBrandAppleFilled } from '@tabler/icons-vue';
+import { IconServer } from '@tabler/icons-vue';
 
 const router = useRouter();
 
 // 跳转到节点列表
 const goToNodes = () => {
   router.push('/nodes');
-};
-
-// 打开 iframe 弹窗事件
-const emit = defineEmits(['open-iframe-popup']);
-const openIframePopup = () => {
-  emit('open-iframe-popup');
 };
 </script>
 

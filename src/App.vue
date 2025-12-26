@@ -47,6 +47,13 @@
           >
             <IconTag :size="20" />
           </button>
+          <button
+            v-if="PROFILE_CONFIG.showGiftCardRedeem"
+            class="gift-btn"
+            @click="$router.push('/profile')"
+          >
+            <IconGift :size="20" />
+          </button>
           <MobileToolbar />
         </div>
       </div>
